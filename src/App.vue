@@ -18,9 +18,9 @@ const ffi = require('ffi-napi')
 const path = require('path')
 const fs = require("fs")
 
-// 获取 DLL 路径
+// 获取 DLL 路径（根据不同平台，选择不同的DLL）
 // eslint-disable-next-line no-undef
-let dll_path = path.join(__static, 'dll/arithmeticoperations.dll')
+let dll_path = path.join(__static, `dll/arithmetic-operations_${process.arch}.dll`)
 
 // 修正开发环境的路径
 dll_path = dll_path.replace('\\public\\', '\\')
@@ -38,6 +38,7 @@ export default {
 
       fs.access(dll_path, function (err) {
         if (err) {
+          console.error(dll_path)
           alert('DLL 文件不存在：'+ dll_path)
         } else {
           console.log('DLL 文件已存在：', dll_path)

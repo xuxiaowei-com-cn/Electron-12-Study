@@ -6,8 +6,12 @@ module.exports = {
       builderOptions: {
         extraResources: [
           {
-            from: "./dll/arithmeticoperations.dll",
-            to: "../dll/arithmeticoperations.dll"
+            from: "./dll/arithmetic-operations_ia32.dll",
+            to: "../dll/arithmetic-operations_ia32.dll"
+          },
+          {
+            from: "./dll/arithmetic-operations_x64.dll",
+            to: "../dll/arithmetic-operations_x64.dll"
           }
         ]
       }
