@@ -1,0 +1,22 @@
+{
+  "name": "electron-12-study",
+  "version": "1.0.0",
+  "description": "Electron 12 学习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuxiaowei-com-cn/Electron-12-Study.git"
+  },
+  "keywords": [
+    "electron"
+  ],
+  "author": "徐晓伟 <xuxiaowei@xuxiaowei.com.cn>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xuxiaowei-com-cn/Electron-12-Study/issues"
+  },
+  "homepage": "https://github.com/xuxiaowei-com-cn/Electron-12-Study#readme"
+}
