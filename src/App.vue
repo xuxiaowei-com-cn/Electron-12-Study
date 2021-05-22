@@ -6,6 +6,7 @@
   <input id="numB" type="text"/>
   <button @click="sum">求和</button>
   <input id="numC" type="text" disabled/>
+  <span>非数字会直接忽略</span>
   <br>
 
   <HelloWorld msg="Welcome to Your Vue.js App"/>
