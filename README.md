@@ -2,6 +2,8 @@
 
 Electron 12 学习
 
+## [本项目博客](https://blog.csdn.net/qq_32596527/category_11078908.html)
+
 ## 仓库地址
 
 - [GitHub](https://github.com/xuxiaowei-com-cn/Electron-12-Study)
