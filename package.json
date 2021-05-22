@@ -4,6 +4,7 @@
   "description": "Electron 12 学习",
   "main": "index.js",
   "scripts": {
+    "start": "electron .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/xuxiaowei-com-cn/Electron-12-Study/issues"
   },
-  "homepage": "https://github.com/xuxiaowei-com-cn/Electron-12-Study#readme"
+  "homepage": "https://github.com/xuxiaowei-com-cn/Electron-12-Study#readme",
+  "devDependencies": {
+    "electron": "^12.0.9"
+  }
 }
