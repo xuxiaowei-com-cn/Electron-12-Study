@@ -8,7 +8,10 @@
   <input id="numC" type="text" disabled/>
   <span>非数字会直接忽略</span>
   <br>
-
+  <button @click="version">获取当前版本</button>
+  <button @click="update">检查更新</button>
+  <button @click="install" id="install" style="display: none">安装</button>
+  <span>请查看控制台</span>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
@@ -17,6 +20,8 @@ import HelloWorld from './components/HelloWorld.vue'
 const ffi = require('ffi-napi')
 const path = require('path')
 const fs = require("fs")
+let {ipcRenderer} = require('electron')
+const package_json = require('../package.json');
 
 // 获取 DLL 路径（根据不同平台，选择不同的DLL）
 // eslint-disable-next-line no-undef
@@ -27,6 +32,17 @@ dll_path = dll_path.replace('\\public\\', '\\')
 
 // 修正生产环境的路径
 dll_path = dll_path.replace('\\resources\\app.asar\\', '\\')
+
+// 主进程向渲染进程发送消息
+ipcRenderer.on('render_update', (event, type, msg, param) => {
+  console.log(type, msg, param)
+})
+
+// 主进程向渲染进程发送消息
+ipcRenderer.on('render_update_update-downloaded', (event, type, msg, param) => {
+  console.log(type, msg, param)
+  document.getElementById('install').style.display=""
+})
 
 export default {
   name: 'App',
@@ -59,6 +75,18 @@ export default {
 
       document.getElementById('numC').value = result.toString()
 
+    },
+    version() {
+      // electron 版本
+      console.log(package_json.version)
+    },
+    update() {
+      // 渲染进程向主进程发送消息
+      ipcRenderer.send('main_update')
+    },
+    install() {
+      // 渲染进程向主进程发送消息
+      ipcRenderer.send('main_install')
     }
   }
 }
