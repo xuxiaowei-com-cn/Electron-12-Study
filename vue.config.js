@@ -12,6 +12,14 @@ module.exports = {
           {
             from: "./dll/arithmetic-operations_x64.dll",
             to: "../dll/arithmetic-operations_x64.dll"
+          },
+          {
+            from: "./dll/termb.dll",
+            to: "../dll/termb.dll"
+          },
+          {
+            from: "./dll/WltRS.dll",
+            to: "../dll/WltRS.dll"
           }
         ]
       }
