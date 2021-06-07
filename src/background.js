@@ -15,6 +15,7 @@ protocol.registerSchemesAsPrivileged([
 async function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
+    show: false,
     width: 800,
     height: 600,
     webPreferences: {
@@ -36,6 +37,10 @@ async function createWindow() {
     // Load the index.html when not in development
     await win.loadURL('app://./index.html')
   }
+
+  win.once('ready-to-show', () => {
+    win.show()
+  })
 
   // 启动项目时检查更新
   await autoUpdater.checkForUpdates()
