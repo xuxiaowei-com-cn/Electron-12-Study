@@ -139,3 +139,9 @@ autoUpdater.on('update-downloaded', function (info) {
     webContents.getAllWebContents()[i].send('render_update_update-downloaded', 'update-downloaded', '更新下载：', info)
   }
 })
+
+ipcMain.on('rendererToMain', (event, arg1, arg2) => {
+  console.log('主进程接收到发送者：', event.sender)
+  console.log('主进程接收参数1：', arg1)
+  console.log('主进程接收参数2：', arg2)
+})
