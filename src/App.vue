@@ -49,6 +49,13 @@ ipcRenderer.on('render_update_update-downloaded', (event, type, msg, param) => {
   document.getElementById('install').style.display = ""
 })
 
+// 主进程向渲染进程发送消息
+ipcRenderer.on('mainToRenderer', (event, arg3, arg4) => {
+  console.log('渲染进程接收到发送者：', event.sender)
+  console.log('渲染进程接收参数3：', arg3)
+  console.log('渲染进程接收参数4：', arg4)
+})
+
 export default {
   name: 'App',
   components: {

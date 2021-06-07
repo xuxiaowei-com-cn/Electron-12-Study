@@ -144,4 +144,12 @@ ipcMain.on('rendererToMain', (event, arg1, arg2) => {
   console.log('主进程接收到发送者：', event.sender)
   console.log('主进程接收参数1：', arg1)
   console.log('主进程接收参数2：', arg2)
+
+  // 主进程根据发送者，响应消息
+  event.sender.send('mainToRenderer',
+      {'arg3-1': 'value3-1', 'arg3-2': 'value3-2'}, {'arg4-1': 'value4-1', 'arg4-2': 'value4-2'})
+
+  // 原理同上
+  // event.reply('mainToRenderer',
+  //     {'arg3-1': 'value3-1', 'arg3-2': 'value3-2'}, {'arg3-1': 'value3-1', 'arg3-2': 'value3-2'})
 })
