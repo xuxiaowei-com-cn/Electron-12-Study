@@ -18,6 +18,7 @@ async function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
+      // eslint-disable-next-line no-undef
       preload: path.join(__static, 'preload.js'),
       // Use pluginOptions.nodeIntegration, leave this alone
       // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
@@ -89,12 +90,12 @@ const feed_url = "http://127.0.0.1/electron"
 autoUpdater.setFeedURL(feed_url)
 
 // 接收更新消息
-ipcMain.on('main_update', (event) => {
+ipcMain.on('main_update', () => {
   autoUpdater.checkForUpdates()
 })
 
 // 安装
-ipcMain.on('main_install', (event) => {
+ipcMain.on('main_install', () => {
   autoUpdater.quitAndInstall()
 })
 
