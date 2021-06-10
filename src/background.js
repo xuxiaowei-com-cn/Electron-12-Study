@@ -7,6 +7,8 @@ const isDevelopment = process.env.NODE_ENV !== 'production'
 const path = require('path')
 import {autoUpdater} from 'electron-updater'
 
+require('@electron/remote/main').initialize()
+
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } }
@@ -19,6 +21,8 @@ async function createWindow() {
     width: 800,
     height: 600,
     webPreferences: {
+      // 是否启用`remote`模块。默认值为`false`。
+      enableRemoteModule: true,
       // eslint-disable-next-line no-undef
       preload: path.join(__static, 'preload.js'),
       // 是否启用Node集成。
@@ -161,4 +165,16 @@ ipcMain.on('rendererToMain', (event, arg1, arg2) => {
   // 原理同上
   // event.reply('mainToRenderer',
   //     {'arg3-1': 'value3-1', 'arg3-2': 'value3-2'}, {'arg3-1': 'value3-1', 'arg3-2': 'value3-2'})
+})
+
+ipcMain.on('new_rendererToMain', (event, arg1, arg2) => {
+  console.log('主进程接收到发送者：', event.sender)
+  console.log('主进程接收参数1：', arg1)
+  console.log('主进程接收参数2：', arg2)
+
+  // 找到所有渲染进程并发送消息
+  for (let i in webContents.getAllWebContents()) {
+    webContents.getAllWebContents()[i].send('new_mainToRenderer', arg1, arg2)
+  }
+
 })
