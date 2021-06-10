@@ -20,6 +20,13 @@
         console.log('渲染进程接收参数4：', arg4)
     })
 
+    // 渲染进程向渲染进程发送消息
+    ipcRenderer.on('new_rendererToRenderer', (event, arg3, arg4) => {
+        console.log('渲染进程接收到发送者：', event.sender)
+        console.log('渲染进程接收参数5：', arg3)
+        console.log('渲染进程接收参数6：', arg4)
+    })
+
 </script>
 
 </body>

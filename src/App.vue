@@ -18,6 +18,7 @@
   <br>
   <button @click="makeNewWindow">创建多个渲染进程</button>
   <button @click="newRendererToMain">通过主进程向其他进程发送消息</button>
+  <button @click="newRendererToRenderer">直接向其他进程发送消息</button>
   <span>请查看其他进程控制台</span>
   <br>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
@@ -114,6 +115,13 @@ export default {
       // 渲染进程向主进程发送消息
       ipcRenderer.send('new_rendererToMain',
           {'arg5-1': 'value5-1', 'arg5-2': 'value5-2'}, {'arg6-1': 'value6-1', 'arg6-2': 'value6-2'})
+    },
+    newRendererToRenderer() {
+      // 渲染进程向渲染进程发送消息
+      for (let i in remote.webContents.getAllWebContents()) {
+        remote.webContents.getAllWebContents()[i].send('new_rendererToRenderer',
+            {'arg7-1': 'value7-1', 'arg7-2': 'value7-2'}, {'arg8-1': 'value8-1', 'arg8-2': 'value8-2'})
+      }
     },
     makeNewWindow() {
       // 创建多个渲染进程
