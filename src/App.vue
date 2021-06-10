@@ -17,7 +17,7 @@
   <span>请查看控制台</span>
   <br>
   <button @click="makeNewWindow">创建多个渲染进程</button>
-  <button @click="newRendererToMain">向其他进程发送消息</button>
+  <button @click="newRendererToMain">通过主进程向其他进程发送消息</button>
   <span>请查看其他进程控制台</span>
   <br>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
