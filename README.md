@@ -12,7 +12,7 @@ Electron 12 学习
 
 - [Gitee](https://gitee.com/xuxiaowei-com-cn/Electron-12-Study)
 
-## 依赖
+## 开发依赖
 
 - electron
     - [npmjs](https://www.npmjs.com/package/electron)
