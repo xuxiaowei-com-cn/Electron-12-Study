@@ -38,8 +38,10 @@ Electron 12 学习
     - [npmjs](https://www.npmjs.com/package/electron)
     - [taobao](https://npm.taobao.org/mirrors/electron)
 - electron-devtools-installer
+    - [npmjs](https://www.npmjs.com/package/electron-devtools-installer)
 - eslint
     - [npmjs](https://www.npmjs.com/package/eslint)
 - eslint-plugin-vue
     - [npmjs](https://www.npmjs.com/package/eslint-plugin-vue)
 - vue-cli-plugin-electron-builder
+    - [npmjs](https://www.npmjs.com/package/vue-cli-plugin-electron-builder)
