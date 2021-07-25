@@ -11,3 +11,30 @@ Electron 12 学习
 - [CodeChina](https://codechina.csdn.net/xuxiaowei-com-cn/Electron-12-Study)
 
 - [Gitee](https://gitee.com/xuxiaowei-com-cn/Electron-12-Study)
+
+## 依赖
+
+- core-js
+    - [npmjs](https://www.npmjs.com/package/core-js)
+- vue
+    - [npmjs](https://www.npmjs.com/package/vue)
+
+## 开发依赖
+
+- @vue/cli-plugin-babel
+    - [npmjs](https://www.npmjs.com/package/@vue/cli-plugin-babel)
+- @vue/cli-plugin-eslint
+    - [npmjs](https://www.npmjs.com/package/@vue/cli-plugin-eslint)
+- @vue/cli-service
+    - [npmjs](https://www.npmjs.com/package/@vue/cli-service)
+- @vue/compiler-sfc
+    - [npmjs](https://www.npmjs.com/package/@vue/compiler-sfc)
+- babel-eslint
+    - [npmjs](https://www.npmjs.com/package/babel-eslint)
+- electron
+    - [npmjs](https://www.npmjs.com/package/electron)
+    - [taobao](https://npm.taobao.org/mirrors/electron)
+- eslint
+    - [npmjs](https://www.npmjs.com/package/eslint)
+- eslint-plugin-vue
+    - [npmjs](https://www.npmjs.com/package/eslint-plugin-vue)
