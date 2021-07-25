@@ -11,3 +11,9 @@ Electron 12 学习
 - [CodeChina](https://codechina.csdn.net/xuxiaowei-com-cn/Electron-12-Study)
 
 - [Gitee](https://gitee.com/xuxiaowei-com-cn/Electron-12-Study)
+
+## 依赖
+
+- electron
+    - [npmjs](https://www.npmjs.com/package/electron)
+    - [taobao](https://npm.taobao.org/mirrors/electron)
