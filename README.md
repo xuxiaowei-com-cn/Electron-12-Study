@@ -21,6 +21,8 @@ Electron 12 学习
 
 ## 开发依赖
 
+- @babel/eslint-parser
+    - [npmjs](https://www.npmjs.com/package/@babel/eslint-parser)
 - @vue/cli-plugin-babel
     - [npmjs](https://www.npmjs.com/package/@vue/cli-plugin-babel)
 - @vue/cli-plugin-eslint
@@ -31,6 +33,7 @@ Electron 12 学习
     - [npmjs](https://www.npmjs.com/package/@vue/compiler-sfc)
 - babel-eslint
     - [npmjs](https://www.npmjs.com/package/babel-eslint)
+    - 已废弃，推荐使用 @babel/eslint-parser，但 vue 运行存在问题
 - electron
     - [npmjs](https://www.npmjs.com/package/electron)
     - [taobao](https://npm.taobao.org/mirrors/electron)
