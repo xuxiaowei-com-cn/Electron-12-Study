@@ -27,6 +27,8 @@
     <br>
     <el-button>默认按钮</el-button>
     <br>
+    <el-button @click="increment">vuex</el-button>
+    <br>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -197,6 +199,10 @@ export default {
       myNotification.addEventListener('click', () => {
         console.log('addEventListener click')
       })
+    },
+    increment() {
+      this.$store.commit('increment')
+      console.log(this.$store.state.count)
     }
   }
 }
