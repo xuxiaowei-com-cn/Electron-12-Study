@@ -24,6 +24,8 @@
   <button @click="basicNoti">Notification 基本通知</button>
   <button @click="advancedNoti">Notification 高级通知</button>
   <br>
+  <el-button>默认按钮</el-button>
+  <br>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
