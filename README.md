@@ -25,8 +25,10 @@ Electron 12 学习
     - [npmjs](https://www.npmjs.com/package/ffi-napi)
 - vue
     - [npmjs](https://www.npmjs.com/package/vue)
+    - [vue](https://v3.cn.vuejs.org/)
 - vue-router
     - [npmjs](https://www.npmjs.com/package/vue-router)
+    - [vue-router](https://next.router.vuejs.org/zh/)
 
 ## 开发依赖
 
