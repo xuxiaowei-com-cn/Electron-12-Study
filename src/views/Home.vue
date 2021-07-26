@@ -29,6 +29,8 @@
     <br>
     <el-button @click="increment">vuex</el-button>
     <br>
+    <el-button @click="jsEncrypt">JsEncrypt</el-button>
+    <br>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -36,6 +38,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+import JsEncrypt from 'jsencrypt/bin/jsencrypt.min' // 导入 JsEncrypt 依赖
 
 const ffi = require('ffi-napi')
 const path = require('path')
@@ -203,6 +206,20 @@ export default {
     increment() {
       this.$store.commit('increment')
       console.log(this.$store.state.count)
+    },
+    jsEncrypt() {
+      const RSA_PUBLIC_KEY = 'MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCD5XD8TEL7d6EwN6WohUhLMPbx7LumqTY4hD0wHQDVB8QcOtyKiHTJEL+KnmY662gkDJnxiaeMUqX5c2AneXf3wLCYi6I8JmFqSNhOdxNdo/YvklPcmBAmxpW2grZdO4J2MWVykHrAMD07YJOKXDZcwe4HQgpoIH7hKvalcc4QnQIDAQAB'
+      console.log('RSA_PUBLIC_KEY：', RSA_PUBLIC_KEY)
+      JsEncrypt.prototype.setPublicKey(RSA_PUBLIC_KEY)
+      const text = '你好，Electron！'
+      console.log('text：', text)
+      const encrypt = JsEncrypt.prototype.encrypt(text)
+      console.log('encrypt：', encrypt)
+      const RSA_PRIVATE_KEY = 'MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBAIPlcPxMQvt3oTA3paiFSEsw9vHsu6apNjiEPTAdANUHxBw63IqIdMkQv4qeZjrraCQMmfGJp4xSpflzYCd5d/fAsJiLojwmYWpI2E53E12j9i+SU9yYECbGlbaCtl07gnYxZXKQesAwPTtgk4pcNlzB7gdCCmggfuEq9qVxzhCdAgMBAAECgYBYoWqOL5TnNFlddFdeacnNtSaMJR9n+9cSnVIcrbCsdl6C9c7TTKTlo9qChLR/rUa6yrj7xRuQwM0FVlFr1UUWeoiYK4A7KKSMwbe5HZkj5hZM1O9T/nqXrdI+qztqUcPMoThE1W3pSJ1SuFH2NSoWyXuyYXRdoAyTwoVSVZ4WBQJBAOeqB4PlrNCVgCveabrc/WTTSuUvu42NKG7n7huaQtrDH7uy0GIumq8MwuZl+R6ZUtyxv2CA9MK0dPyPKSkDbCcCQQCRwG2g2XPgCDXyy0Sl+GOEnkf2JWKVhuGrlCf41gwJP77JPMekSrNi0Yw27c0YwdFmrtm/GKAGhL4vYtvxo+ObAkEAqkRl0aN1KLk4wwVtYFIcS4agfWJfzuH43crJTrBKgs72+9WpIwBt4ErY1M4OE1dNd7eMmTkurAxGD3qJHgPN8QJAbIQSm0GLjm9Oi1hf4hpPLfwSo+ctwRpNhsul/xSOnYxCZd3E3kNnz9koRfVDUH1thMAGCsswyemnF+zIyN42pQJAI6ZJSx+bUacrS6yhPLKJXDRrZtp7xCGLesc6kMK6Yyaa2FcQWs+XZncPEdlFxsFgOgAsBd9s+PpCv6DRFIR9Lg=='
+      console.log('RSA_PRIVATE_KEY：', RSA_PRIVATE_KEY)
+      JsEncrypt.prototype.setPrivateKey(RSA_PRIVATE_KEY)
+      const decrypt = JsEncrypt.prototype.decrypt(encrypt)
+      console.log('decrypt：', decrypt)
     }
   }
 }

@@ -21,6 +21,7 @@
     "electron-updater": "^4.3.9",
     "element-plus": "^1.0.2-beta.62",
     "ffi-napi": "^4.0.3",
+    "jsencrypt": "^3.2.0",
     "vue": "^3.1.5",
     "vue-router": "^4.0.10",
     "vuex": "^4.0.2"
