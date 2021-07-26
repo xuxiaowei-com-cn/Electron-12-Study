@@ -18,6 +18,9 @@ Electron 12 学习
     - [npmjs](https://www.npmjs.com/package/core-js)
 - electron-updater
     - [npmjs](https://www.npmjs.com/package/electron-updater)
+- element-plus
+    - [npmjs](https://www.npmjs.com/package/element-plus)
+    - [gitee](https://element-plus.gitee.io)
 - ffi-napi
     - [npmjs](https://www.npmjs.com/package/ffi-napi)
 - vue
