@@ -14,14 +14,26 @@ Electron 12 学习
 
 ## 依赖
 
+- axios
+    - [npmjs](https://www.npmjs.com/package/axios)
 - core-js
     - [npmjs](https://www.npmjs.com/package/core-js)
 - electron-updater
     - [npmjs](https://www.npmjs.com/package/electron-updater)
+- element-plus
+    - [npmjs](https://www.npmjs.com/package/element-plus)
+    - [gitee](https://element-plus.gitee.io)
 - ffi-napi
     - [npmjs](https://www.npmjs.com/package/ffi-napi)
 - vue
     - [npmjs](https://www.npmjs.com/package/vue)
+    - [vue](https://v3.cn.vuejs.org/)
+- vue-router
+    - [npmjs](https://www.npmjs.com/package/vue-router)
+    - [vue-router](https://next.router.vuejs.org/zh/)
+- vuex
+    - [npmjs](https://www.npmjs.com/package/vuex)
+    - [vuex](https://next.vuex.vuejs.org/zh/index.html)
 
 ## 开发依赖
 
@@ -33,6 +45,10 @@ Electron 12 学习
     - [npmjs](https://www.npmjs.com/package/@vue/cli-plugin-babel)
 - @vue/cli-plugin-eslint
     - [npmjs](https://www.npmjs.com/package/@vue/cli-plugin-eslint)
+- @vue/cli-plugin-router
+    - [npmjs](https://www.npmjs.com/package/@vue/cli-plugin-router)
+- @vue/cli-plugin-vuex
+    - [npmjs](https://www.npmjs.com/package/@vue/cli-plugin-vuex)
 - @vue/cli-service
     - [npmjs](https://www.npmjs.com/package/@vue/cli-service)
 - @vue/compiler-sfc
