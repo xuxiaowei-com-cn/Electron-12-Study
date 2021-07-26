@@ -14,6 +14,8 @@ Electron 12 学习
 
 ## 依赖
 
+- axios
+    - [npmjs](https://www.npmjs.com/package/axios)
 - core-js
     - [npmjs](https://www.npmjs.com/package/core-js)
 - electron-updater
