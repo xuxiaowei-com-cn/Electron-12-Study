@@ -24,6 +24,7 @@ Electron 12 学习
     - [npmjs](https://www.npmjs.com/package/vue)
 
 ## 开发依赖
+
 - @electron/remote
     - [npmjs](https://www.npmjs.com/package/@electron/remote)
 - @babel/eslint-parser
