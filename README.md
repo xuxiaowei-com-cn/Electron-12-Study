@@ -29,6 +29,7 @@ Electron 12 学习
     - [npmjs](https://www.npmjs.com/package/vue-router)
 - vuex
     - [npmjs](https://www.npmjs.com/package/vuex)
+    - [vuex](https://next.vuex.vuejs.org/zh/index.html)
 
 ## 开发依赖
 
