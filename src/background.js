@@ -9,6 +9,10 @@ import {autoUpdater} from 'electron-updater'
 
 require('@electron/remote/main').initialize()
 
+// 标识
+// 如果 Windows 屏蔽了、或者不提示 Notification，可尝试修改 app.setAppUserModelId()
+app.setAppUserModelId("cn.com.xuxiaowei.electron");
+
 // Scheme must be registered before the app is ready
 protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } }

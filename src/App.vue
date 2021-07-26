@@ -21,6 +21,9 @@
   <button @click="newRendererToRenderer">直接向其他进程发送消息</button>
   <span>请查看其他进程控制台</span>
   <br>
+  <button @click="basicNoti">Notification 基本通知</button>
+  <button @click="advancedNoti">Notification 高级通知</button>
+  <br>
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
@@ -144,7 +147,51 @@ export default {
       })
       // eslint-disable-next-line no-undef
       win.loadFile(path.join(__static, 'new_index.html')
-    )
+      )
+    },
+    basicNoti() {
+      const notificationBasic = {title: '基本通知', body: '短消息部分'}
+      const myNotification = new window.Notification(notificationBasic.title, notificationBasic)
+      console.log(myNotification)
+      myNotification.onclick = () => {
+        console.log('onclick')
+      }
+      myNotification.onclose = () => {
+        console.log('onclose')
+      }
+      myNotification.onerror = () => {
+        console.log('onerror')
+      }
+      myNotification.onshow = () => {
+        console.log('onshow')
+      }
+      myNotification.addEventListener('click', () => {
+        console.log('addEventListener click')
+      })
+    },
+    advancedNoti() {
+      const notificationAdvanced = {
+        title: 'Notification with image',
+        body: 'Short message plus a custom image',
+        icon: 'programming.png'
+      }
+      const myNotification = new window.Notification(notificationAdvanced.title, notificationAdvanced)
+      console.log(myNotification)
+      myNotification.onclick = () => {
+        console.log('onclick')
+      }
+      myNotification.onclose = () => {
+        console.log('onclose')
+      }
+      myNotification.onerror = () => {
+        console.log('onerror')
+      }
+      myNotification.onshow = () => {
+        console.log('onshow')
+      }
+      myNotification.addEventListener('click', () => {
+        console.log('addEventListener click')
+      })
     }
   }
 }
